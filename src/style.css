@@ -37,7 +37,7 @@ h5 {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 50rem;
   width: 100%;
   margin: auto 0;
   padding: 5rem 1rem;
@@ -68,6 +68,7 @@ h1 {
 .search {
   gap: 1rem;
   align-items: initial;
+  justify-content: center;
 }
 
 input {
@@ -84,7 +85,7 @@ input:focus {
 }
 
 button {
-  width: 20%;
+  width: 40%;
   border: none;
   background-color: #fff;
   color: #43aefc;
@@ -95,11 +96,14 @@ button {
 }
 
 main {
-  display: none;
   margin-top: 2rem;
   border-radius: 0.5rem;
   background-color: #fff;
   font-size: 1.8rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .top {
@@ -156,22 +160,23 @@ main {
 }
 
 .center {
+  justify-content: center;
   align-items: center;
+  margin: 5rem 0 10rem 0;
 }
 
-.temp-icon {
+#temperature-icon {
   width: 50%;
 }
 
-.temp {
+#temperature {
   font-size: 7rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.center span {
+#description {
   font-weight: 600;
-  margin-bottom: 4rem;
 }
 
 .bottom {
@@ -189,7 +194,6 @@ main {
   border-right: 1px solid #a5a5a5;
 }
 
-.humidity,
-.feels-like {
+.small-icon {
   width: 20%;
 }

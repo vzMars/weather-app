@@ -5,15 +5,24 @@ import UI from './modules/UI';
 
 const locationSearch = document.querySelector('#location-search');
 const btn = document.querySelector('button');
+const checkbox = document.querySelector('#myToggle');
 
-btn.addEventListener('click', async () => {
-  if (locationSearch.value) {
-    const weatherData = await Weather.getData('Bronx County', 'imperial');
-    console.log(weatherData);
-    locationSearch.value = '';
+checkbox.addEventListener('click', (e) => {
+  if (e.target.checked) {
+    UI.fahrenheitToCelsius();
+  } else {
+    UI.celsiusToFahrenheit();
   }
 });
 
-// Weather.getData('Bronx County', 'imperial').then((data) => console.log(data));
-
-// Weather.getData('Bronx County', 'metric').then((data) => console.log(data));
+btn.addEventListener('click', async () => {
+  const location = locationSearch.value;
+  if (location) {
+    const weatherData = await Weather.getData(location);
+    locationSearch.value = '';
+    if (weatherData) {
+      checkbox.checked = false;
+      UI.renderWeatherContainer(weatherData);
+    }
+  }
+});
