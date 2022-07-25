@@ -6,5 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <div class="search row">
+        <input type="text" name="location" id="location-search" />
+        <button>Search</button>
+      </div>
+
+      <main>
+        <div class="top row">
+          <h4 id="location"></h4>
+          <form>
+            <label class="toggle" for="myToggle">
+              <input
+                class="toggle__input"
+                type="checkbox"
+                name="myToggle"
+                id="myToggle"
+              />
+              <div class="toggle__fill"></div>
+            </label>
+          </form>
+        </div>
+        <div class="center column">
+          <img id="temperature-icon" src="" />
+          <h2 id="temperature"></h2>
+          <span id="description"></span>
+        </div>
+        <div class="bottom row">
+          <div class="left row">
+            <img id="feels-like-icon" class="small-icon" src="" />
+            <div class="column">
+              <h5 id="feels-like"></h5>
+              <span>Feels like</span>
+            </div>
+          </div>
+          <div class="right row">
+            <img id="humidity-icon" class="small-icon" src="" />
+            <div class="column">
+              <h5 id="humidity"></h5>
+              <span>Humidity</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
